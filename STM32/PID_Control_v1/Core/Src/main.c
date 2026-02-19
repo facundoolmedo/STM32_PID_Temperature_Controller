@@ -72,6 +72,19 @@ uint8_t rxComplete = 0;
 uint16_t adc_val[2];
 char msg[31];
 char rxBuffer[1];
+
+//PID Struct
+
+typedef struct __PID{
+	uint8_t ID;
+	float temp;
+	float kp,ki,kd;
+	float setpoint;
+	float prev_temp;
+}PID;
+
+
+
 /* USER CODE END 0 */
 
 /**
